@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <img src="static/logo1.png" alt="Logo" class="logo">
+    <title>Detalle Mano de Obra</title>
+    <h1>Detalle Mano de Obra por Trabajador</h1>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/estilo.css') }}">
+</head>
+
+<br>
+    
+    
+<body style="background-image: url('static/foto10.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center center;">
+  
+    <form method="post" action="/generate-pdf">
+
+        <label for="año">Año:</label>
+        <select name="año" id="año">
+            <!-- Puedes ajustar estos años según tus necesidades -->
+            <!--<option value="2023">2023</option>-->
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <!-- Agrega más años según sea necesario -->
+        </select><br>
+
+        <label for="mes">Mes:</label>
+        <select name="mes" id="mes">
+            <option value="1">Enero</option>
+            <option value="2">Febrero</option>
+            <option value="3">Marzo</option>
+            <option value="4">Abril</option>
+            <option value="5">Mayo</option>
+            <option value="6">Junio</option>
+            <option value="7">Julio</option>
+            <option value="8">Agosto</option>
+            <option value="9">Septiembre</option>
+            <option value="10">Octubre</option>
+            <option value="11">Noviembre</option>
+            <option value="12">Diciembre</option>
+        </select><br>
+
+        <label for="sucursal">Sucursal:</label>
+        <select name="sucursal" id="sucursal">
+            <option value="2">San Manuel</option>
+            <option value="3">Santa Victoria</option>
+            <option value="4">Cullipeumo</option>
+            <option value="5">Chocalan</option>
+            <option value="7">Santa Ines</option>
+            <option value="8">Maiten Gigante</option>
+            <option value="7">Hospital</option>
+            <option value="27">Itahue</option>
+        </select><br>
+
+        <input type="submit" value="Generar PDF">
+    </form>
+</body>
+</html>
+
